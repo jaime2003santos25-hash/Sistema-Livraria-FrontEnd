@@ -1,5 +1,5 @@
 # 📚 Sistema de Livraria - Frontend
-![preview](./src/assets/images/preview.png)
+![preview](./src/Screenshots/preview.png)
 
 Um aplicativo web moderno e responsivo para gerenciamento e exploração de uma livraria digital. Desenvolvido com React e Vite para uma experiência rápida e intuitiva.
 
