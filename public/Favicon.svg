@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#111111"/>
+
+  <!-- Livro -->
+  <path d="M18 16C18 14.9 18.9 14 20 14H48V48H20C18.9 48 18 48.9 18 50C18 51.1 18.9 52 20 52H50"
+        stroke="white"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Linhas -->
+  <path d="M26 24H40"
+        stroke="white"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <path d="M26 31H37"
+        stroke="white"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <!-- Marcador -->
+  <path d="M40 14V28L36 25.5L32 28V14"
+        fill="white"/>
+</svg> 
