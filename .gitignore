@@ -13,13 +13,6 @@ dist
 dist-ssr
 *.local
 
-# Imagens de livros (não incluídas nos commits)
-src/assets/images/*.jpg
-src/assets/images/*.jpeg
-src/assets/images/*.png
-src/assets/images/*.gif
-src/assets/images/*.webp
-
 # Mantém apenas as capturas em docs/screenshots/ para o README
 !docs/screenshots/
 
