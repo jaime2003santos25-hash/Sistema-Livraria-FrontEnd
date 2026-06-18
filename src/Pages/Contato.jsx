@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FiHome, FiBook, FiTag, FiMail, FiPhone, FiMapPin, FiSend, FiLinkedin, FiGithub } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 
 function Contato() {
   const [name, setName] = useState('')
@@ -35,25 +37,25 @@ Meu e-mail: ${email}`)
       <header className="navbar">
 
         <h1 className="logo">
-          Montreé Books
+          📚 Montreé Books
         </h1>
 
         <nav>
 
           <Link to="/">
-            Início
+            <FiHome /> Início
           </Link>
 
           <Link to="/livros">
-            Livros
+            <FiBook /> Livros
           </Link>
 
           <Link to="/categoria">
-            Categorias
+            <FiTag /> Categorias
           </Link>
 
           <Link to="/contato">
-            Contato
+            <FiMail /> Contato
           </Link>
 
         </nav>
@@ -64,18 +66,18 @@ Meu e-mail: ${email}`)
       <section className="featured contact-page">
 
         <h2>
-          Entre em Contato
+          📧 Entre em Contato
         </h2>
 
         <div className="contact-grid">
           <form className="contact-form" onSubmit={handleEmailSend}>
-            <h3>Envie sua mensagem</h3>
+            <h3>✍️ Envie sua mensagem</h3>
             <p className="form-description">
               Preencha os campos abaixo e use o campo de observação para mandar sua mensagem ou dúvida.
             </p>
 
             <div className="form-group">
-              <label htmlFor="name">Nome</label>
+              <label htmlFor="name">👤 Nome</label>
               <input
                 id="name"
                 type="text"
@@ -86,7 +88,7 @@ Meu e-mail: ${email}`)
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">E-mail</label>
+              <label htmlFor="email">📨 E-mail</label>
               <input
                 id="email"
                 type="email"
@@ -97,7 +99,7 @@ Meu e-mail: ${email}`)
             </div>
 
             <div className="form-group">
-              <label htmlFor="subject">Assunto</label>
+              <label htmlFor="subject">📝 Assunto</label>
               <input
                 id="subject"
                 type="text"
@@ -108,7 +110,7 @@ Meu e-mail: ${email}`)
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Observações</label>
+              <label htmlFor="message">💬 Observações</label>
               <textarea
                 id="message"
                 className="neon-textarea"
@@ -120,40 +122,40 @@ Meu e-mail: ${email}`)
             </div>
 
             <div className="submit-buttons">
-              <button type="submit">Enviar por e-mail</button>
+              <button type="submit"><FiSend /> Enviar por e-mail</button>
               <button type="button" className="whatsapp-button" onClick={handleWhatsAppSend}>
-                Enviar por WhatsApp
+                <FaWhatsapp /> Enviar por WhatsApp
               </button>
             </div>
           </form>
 
           <div className="card contact-info">
-            <h3>Informações</h3>
+            <h3>ℹ️ Informações</h3>
 
             <div className="info-item">
-              <strong>WhatsApp</strong>
+              <strong><FiPhone /> WhatsApp</strong>
               <p className="author">(11) 99999-9999</p>
             </div>
 
             <div className="info-item">
-              <strong>E-mail</strong>
+              <strong><FiMail /> E-mail</strong>
               <p className="author">contato@montreebooks.com</p>
             </div>
 
             <div className="info-item">
-              <strong>Localização</strong>
+              <strong><FiMapPin /> Localização</strong>
               <p className="author">São Paulo - SP</p>
             </div>
 
             <div className="social-links">
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                LinkedIn
+                <FiLinkedin /> LinkedIn
               </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                GitHub
+                <FiGithub /> GitHub
               </a>
               <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
-                WhatsApp
+                <FaWhatsapp /> WhatsApp
               </a>
             </div>
           </div>
@@ -175,4 +177,4 @@ Meu e-mail: ${email}`)
   )
 }
 
-export default Contato 
+export default Contato

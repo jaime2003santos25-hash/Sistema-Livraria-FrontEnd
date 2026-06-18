@@ -1,7 +1,9 @@
+import { FiPhone, FiMail } from 'react-icons/fi'
+
 function Footer() {
   return (
     <footer className="footer">
-      <h3>Contato</h3>
+      <h3>📞 Contato</h3>
 
       <div className="whatsapp">
         <img
@@ -9,7 +11,11 @@ function Footer() {
           alt="WhatsApp"
         />
 
-        <p>(11) 99999-9999</p>
+        <p><FiPhone /> (11) 99999-9999</p>
+      </div>
+
+      <div className="email">
+        <p><FiMail /> contato@montreebooks.com.br</p>
       </div>
     </footer>
   )

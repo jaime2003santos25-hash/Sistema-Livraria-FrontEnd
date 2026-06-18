@@ -1,16 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FiChevronRight } from 'react-icons/fi'
 
-import anatomiadociclismo from '../../assets/images/anatomiadociclismo.jpg'
-import cleanCode from '../../assets/images/cleancode.jpg'
-import habitosAtomicos from '../../assets/images/HabitosAtomicos.jpg'
-import hero from '../../assets/images/hero.jpg'
-import javaBasico from '../../assets/images/Java.jpg'
-import bancoDados from '../../assets/images/BancoDados.jpg'
-import redesComputadores from '../../assets/images/redesComputadores.jpg'
-import poderHabito from '../../assets/images/poderHabito.jpg'
-import pooPratica from '../../assets/images/pooPratica.jpg'
-import segurancaInformacao from '../../assets/images/SegurancaIformacao.jpg'
+import cleanCode from '../../Assets/Images/Clean-code.jpg'
+import habitosAtomicos from '../../Assets/Images/Habitos-atomicos.jpg'
+import hero from '../../Assets/Images/My-hero.jpg'
+import javaBasico from '../../Assets/Images/Java.png'
+import poderHabito from '../../Assets/Images/Poder-do-habito.jpg'
+import anatomiadociclismo from '../../Assets/Images/Anatomia-do-ciclismo.jpg'
+
 const defaultBooks = [
   {
     title: 'Clean Code',
@@ -35,7 +33,7 @@ const defaultBooks = [
   {
     title: 'Redes de Computadores',
     author: 'Ricardo Souza',
-    image: redesComputadores,
+    image: hero,
   },
   {
     title: 'Java Básico',
@@ -45,25 +43,25 @@ const defaultBooks = [
   {
     title: 'POO na Prática',
     author: 'Fernando Lima',
-    image: pooPratica,
+    image: hero,
   },
   {
     title: 'Banco de Dados MySQL',
     author: 'Carla Mendes',
-    image: bancoDados,
+    image: hero,
   },
   {
     title: 'Segurança da Informação',
     author: 'Amanda Rocha',
-    image: segurancaInformacao,
+    image: hero,
   },
 ]
 
 function CarouselBooks({
   books = defaultBooks,
-  title = 'Escolha seu livro',
+  title = '📚 Escolha seu livro',
   description = 'Passe o cursor sobre as capas para ver o destaque e selecione um livro.',
-  buttonLabel = 'Ver mais detalhes',
+  buttonLabel = '✨ Ver mais detalhes',
   ctaLink = '/livros',
 }) {
   const [selectedBook, setSelectedBook] = useState(books[0] || null)
@@ -95,11 +93,11 @@ function CarouselBooks({
         </div>
 
         <div className="carousel-info">
-          <span>Livro selecionado</span>
+          <span>📖 Livro selecionado</span>
           <h3>{selectedBook.title}</h3>
-          <p>{selectedBook.author}</p>
+          <p>✍️ {selectedBook.author}</p>
           <Link to={ctaLink}>
-            <button>{buttonLabel}</button>
+            <button>{buttonLabel} <FiChevronRight /></button>
           </Link>
         </div>
       </div>

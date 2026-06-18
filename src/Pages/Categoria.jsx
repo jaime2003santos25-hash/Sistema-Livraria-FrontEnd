@@ -1,6 +1,7 @@
 // Categoria.jsx
 
 import { Link } from 'react-router-dom'
+import { FiHome, FiBook, FiTag, FiMail } from 'react-icons/fi'
 import CarouselBooks from '../Components/CarouselBooks/CarouselBooks'
 
 function Categoria() {
@@ -11,25 +12,25 @@ function Categoria() {
       <header className="navbar">
 
         <h1 className="logo">
-          Montreé Books
+          📚 Montreé Books
         </h1>
 
         <nav>
 
           <Link to="/">
-            Início
+            <FiHome /> Início
           </Link>
 
           <Link to="/livros">
-            Livros
+            <FiBook /> Livros
           </Link>
 
           <Link to="/categoria">
-            Categorias
+            <FiTag /> Categorias
           </Link>
 
           <Link to="/contato">
-            Contato
+            <FiMail /> Contato
           </Link>
 
         </nav>
@@ -39,7 +40,7 @@ function Categoria() {
       {/* CATEGORIAS */}
       <section className="categories-hero">
         <div className="categories-hero-copy">
-          <span className="eyebrow">Curadoria exclusiva</span>
+          <span className="eyebrow">📌 Curadoria exclusiva</span>
           <h2>Categorias pensadas para leitores exigentes</h2>
           <p>
             Explore nossas coleções com temas estratégicos, guias práticos e histórias inspiradoras.
@@ -49,15 +50,15 @@ function Categoria() {
 
         <div className="categories-hero-cards">
           <article className="hero-card">
-            <strong>+120 títulos</strong>
+            <strong>📚 +120 títulos</strong>
             <p>Livros atualizados nas principais áreas do conhecimento.</p>
           </article>
           <article className="hero-card">
-            <strong>Seleções exclusivas</strong>
+            <strong>⭐ Seleções exclusivas</strong>
             <p>Recomendações cuidadosamente escolhidas para cada perfil de leitura.</p>
           </article>
           <article className="hero-card">
-            <strong>Leitura premium</strong>
+            <strong>👑 Leitura premium</strong>
             <p>Conteúdos com linguagem objetiva e foco em resultados reais.</p>
           </article>
         </div>
@@ -65,7 +66,7 @@ function Categoria() {
 
       <section className="categories-section">
         <div className="categories-header">
-          <h2>Descubra o seu próximo livro</h2>
+          <h2>🔍 Descubra o seu próximo livro</h2>
           <p>
             Navegue entre nossas principais categorias e encontre títulos que combinam qualidade,
             profundidade e design elegante para sua estante digital.
@@ -123,4 +124,4 @@ function Categoria() {
   )
 }
 
-export default Categoria 
+export default Categoria

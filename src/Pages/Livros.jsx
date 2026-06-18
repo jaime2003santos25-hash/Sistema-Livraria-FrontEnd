@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { FiHome, FiBook, FiTag, FiMail } from 'react-icons/fi'
 
 import './Livros.css'
 
-import javaBasicoImage from '../assets/images/Java.jpg'
-import cleanCodeImage from '../assets/images/cleancode.jpg'
-import habitosImage from '../assets/images/HabitosAtomicos.jpg'
-import poderImage from '../assets/images/poderHabito.jpg'
-import anatImage from '../assets/images/anatomiadociclismo.jpg'
-import redesImage from '../assets/images/redesComputadores.jpg'
-import pooImage from '../assets/images/pooPratica.jpg'
-import bancoDadosImage from '../assets/images/BancoDados.jpg'
-import segurancaImage from '../assets/images/SegurancaIformacao.jpg'
+import javaBasicoImage from '../Assets/Images/Java.png'
+import cleanCodeImage from '../Assets/Images/Clean-code.jpg'
+import habitosImage from '../Assets/Images/Habitos-atomicos.jpg'
+import poderImage from '../Assets/Images/Poder-do-habito.jpg'
+import anatImage from '../Assets/Images/Anatomia-do-ciclismo.jpg'
+import heroImage from '../Assets/Images/My-hero.jpg'
 
 function Livros() {
 
@@ -30,6 +28,21 @@ function Livros() {
 
   }, [])
 
+  const getImageByTitle = (titulo) => {
+    const imageMap = {
+      'Clean Code': cleanCodeImage,
+      'Hábitos Atômicos': habitosImage,
+      'O Poder do Hábito': poderImage,
+      'Anatomia do Ciclismo': anatImage,
+      'Redes de Computadores': heroImage,
+      'Java Básico': javaBasicoImage,
+      'POO na Prática': heroImage,
+      'Banco de Dados MySQL': heroImage,
+      'Segurança da Informação': heroImage,
+    }
+    return imageMap[titulo] || javaBasicoImage
+  }
+
   return (
     <>
 
@@ -37,14 +50,14 @@ function Livros() {
       <header className="navbar">
 
         <h1 className="logo">
-          Montreé Books
+          📚 Montreé Books
         </h1>
 
         <nav>
-          <Link to="/">Início</Link>
-          <Link to="/livros">Livros</Link>
-          <Link to="/categoria">Categorias</Link>
-          <Link to="/contato">Contato</Link>
+          <Link to="/"><FiHome /> Início</Link>
+          <Link to="/livros"><FiBook /> Livros</Link>
+          <Link to="/categoria"><FiTag /> Categorias</Link>
+          <Link to="/contato"><FiMail /> Contato</Link>
         </nav>
 
       </header>
@@ -54,7 +67,7 @@ function Livros() {
 
         <div className="featured-intro">
 
-          <h2>Catálogo completo de livros</h2>
+          <h2>📖 Catálogo completo de livros</h2>
 
           <p>
             Encontre o seu próximo título com autor e preço.
@@ -71,34 +84,22 @@ function Livros() {
             <article key={book.id} className="card">
 
               <img
-                src={(
-                  {
-                    'Clean Code': cleanCodeImage,
-                    'Hábitos Atômicos': habitosImage,
-                    'O Poder do Hábito': poderImage,
-                    'Anatomia do Ciclismo': anatImage,
-                    'Redes de Computadores': redesImage,
-                    'Java Básico': javaBasicoImage,
-                    'POO na Prática': pooImage,
-                    'Banco de Dados MySQL': bancoDadosImage,
-                    'Segurança da Informação': segurancaImage,
-                  }[book.titulo] || javaBasicoImage
-                )}
+                src={getImageByTitle(book.titulo)}
                 alt={book.titulo}
               />
 
               <h3>{book.titulo}</h3>
 
               <p className="author">
-                {book.autor}
+                ✍️ {book.autor}
               </p>
 
               <span className="price">
-                R$ {book.preco}
+                💰 R$ {book.preco}
               </span>
 
               <button type="button">
-                Comprar
+                🛒 Comprar
               </button>
 
             </article>

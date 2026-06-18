@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom'
+import { FiHome, FiBook, FiTag, FiMail, FiArrowRight } from 'react-icons/fi'
 
-import cleanCode from '../assets/images/cleancode.jpg'
-import habitosAtomicos from '../assets/images/HabitosAtomicos.jpg'
-import poderHabito from '../assets/images/poderHabito.jpg'
-import anatomiadociclismo from '../assets/images/anatomiadociclismo.jpg'
-import redesComputadores from '../assets/images/redesComputadores.jpg'
-import javaBasico from '../assets/images/Java.jpg'
-import pooPratica from '../assets/images/pooPratica.jpg'
-import bancoDados from '../assets/images/BancoDados.jpg'
-import segurancaInformacao from '../assets/images/SegurancaIformacao.jpg'
+import cleanCode from '../Assets/Images/Clean-code.jpg'
+import habitosAtomicos from '../Assets/Images/Habitos-atomicos.jpg'
+import poderHabito from '../Assets/Images/Poder-do-habito.jpg'
+import anatomiadociclismo from '../Assets/Images/Anatomia-do-ciclismo.jpg'
+import javaBasico from '../Assets/Images/Java.png'
+import hero from '../Assets/Images/My-hero.jpg'
 
 const featuredBooks = [
   {
@@ -39,7 +37,7 @@ const featuredBooks = [
     title: 'Redes de Computadores',
     author: 'Ricardo Souza',
     price: 'R$ 120,00',
-    image: redesComputadores,
+    image: hero,
   },
   {
     title: 'Java Básico',
@@ -51,19 +49,19 @@ const featuredBooks = [
     title: 'POO na Prática',
     author: 'Fernando Lima',
     price: 'R$ 79,90',
-    image: pooPratica,
+    image: hero,
   },
   {
     title: 'Banco de Dados MySQL',
     author: 'Carla Mendes',
     price: 'R$ 89,50',
-    image: bancoDados,
+    image: hero,
   },
   {
     title: 'Segurança da Informação',
     author: 'Amanda Rocha',
     price: 'R$ 149,90',
-    image: segurancaInformacao,
+    image: hero,
   },
 ]
 
@@ -75,25 +73,25 @@ function Home() {
       <header className="navbar">
 
         <h1 className="logo">
-          Montreé Books
+          📚 Montreé Books
         </h1>
 
         <nav>
           <Link to="/">
-            Início
-          </Link  >
+            <FiHome /> Início
+          </Link>
 
           <Link to="/livros">
-            Livros
+            <FiBook /> Livros
           </Link>
 
           <Link to="/categoria">
-  Categorias
-</Link>
+            <FiTag /> Categorias
+          </Link>
 
-<Link to="/contato">
-  Contato
-</Link>
+          <Link to="/contato">
+            <FiMail /> Contato
+          </Link>
         </nav>
 
       </header>
@@ -104,7 +102,7 @@ function Home() {
         <div className="hero-text">
 
           <h2>
-            Descubra novos <span>mundos</span>
+            Descubra novos <span>🌟 mundos</span>
             através da leitura
           </h2>
 
@@ -116,7 +114,7 @@ function Home() {
 
           <Link to="/livros">
             <button>
-              Explorar Catálogo
+              Explorar Catálogo <FiArrowRight />
             </button>
           </Link>
 
@@ -130,7 +128,7 @@ function Home() {
                   <img src={book.image} alt={book.title} />
                   <div className="home-carousel-card-content">
                     <strong>{book.title}</strong>
-                    <span>{book.price}</span>
+                    <span>💰 {book.price}</span>
                   </div>
                 </div>
               ))}
@@ -144,4 +142,4 @@ function Home() {
   )
 }
 
-export default Home 
+export default Home
